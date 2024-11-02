@@ -75,7 +75,7 @@ jobs:
       - name: Store the distribution packages
         uses: actions/upload-artifact@v4
         with:
-          name: pyci-package-{{matrix.os}}-{{ matrix.python-version }}
+          name: pyci-package-${{ matrix.os }}-${{ matrix.python-version }}
           path: dist/
 
   publish-to-pypi:
